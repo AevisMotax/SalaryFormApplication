@@ -986,7 +986,7 @@ namespace SalaryFormApplication
                 char chTemp = ' ';
                 char chLookFor = '\n';
                 int nStart = 0;
-                int nCurrentLine = 1; // iLine != 0 ???????????????????????????????????????????????????????????????????????????????
+                int nCurrentLine = 1; // iLine != 0 
                 // int nCurrentLine2 = 0; USELESS
                 int nPosition1 = 1;
                 int nPosition2 = 0;
@@ -1212,7 +1212,7 @@ namespace SalaryFormApplication
 
             dlgSaved.RestoreDirectory = true;
 
-            //  dlgSaved.InitialDirectory = "C:\work\C#" (Example);
+            //dlgSaved.InitialDirectory = "C:\work\C#" (Example);
 
             if (dlgSaved.ShowDialog() == DialogResult.OK) // Either OK or cancel. OK means user wants to save.
             {
@@ -1230,7 +1230,7 @@ namespace SalaryFormApplication
                         swFile.WriteLine(s); //It will save each "line" (WriteLine) on the new file
                     }
                 }
-                swFile.Close(); //CLose means that it's finished/ We need it if we want to add text on a file.
+                swFile.Close(); //Close means that it's finished/ We need it if we want to add text on a file.
 
 
                 //____________________________________________________________________________________________________
@@ -1245,31 +1245,8 @@ namespace SalaryFormApplication
 
         private void Save_Click(object sender, EventArgs e)
         {
-
             DoSave();
-            /* SaveFileDialog dlgSaved = new SaveFileDialog();
-
-            dlgSaved.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-
-            dlgSaved.RestoreDirectory = true;
-
-            //  dlgSaved.InitialDirectory = "C:\work\C#" (Example);
-
-            if (dlgSaved.ShowDialog() == DialogResult.OK) // Either OK or cancel. OK means user wants to save.
-            {
-                string Filename = dlgSaved.FileName;
-                string [] sData = textShow.Text.Split( new string[] {"\r\n"}, StringSplitOptions.None       );
-
-                StreamWriter swFile = new StreamWriter(Filename);
-
-                foreach (string s in sData)
-                {
-                    swFile.WriteLine(s); //It will save each "line" (WriteLine) on the new file
-                }
-                swFile.Close(); //CLose means that it's finished/ We need it if we want to add text on a file.
-
-
-            } */
+            } 
 
         }
 
@@ -1310,29 +1287,8 @@ namespace SalaryFormApplication
 
         private void Open_Click(object sender, EventArgs e)
         {
-
-            DoOpen();
-            /*  string sA = "";
-            OpenFileDialog opfile = new OpenFileDialog();
-            opfile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-
-            opfile.RestoreDirectory = true; 
-          //  opfile.InitialDirectory = "C:\work\C#"; (Example)
-
-            if (opfile.ShowDialog() == DialogResult.OK)
-            {                
-                string Filename = opfile.FileName;
-                //string Filename2 = opfile.OpenFile();
-              //  var FileOpen = opfile.OpenFile(); <<< THIS ALSO WORKS
-
-                StreamReader srFile = new StreamReader(Filename); // FROM STATEMENT ABOVE, USE FileOpen
-                sA = srFile.ReadToEnd();
-            }
-
-            textShow.Text = sA; */
+           DoOpen();
         }
-
-
 
 
         private void button6_Click(object sender, EventArgs e)
@@ -1374,7 +1330,7 @@ namespace SalaryFormApplication
                         swFile.WriteLine(s); //It will save each "line" (WriteLine) on the new file
                     }
                 }
-                swFile.Close(); //CLose means that it's finished/ We need it if we want to add text on a file.
+                swFile.Close(); //Close means that it's finished/ We need it if we want to add text on a file.
             }
 
 
